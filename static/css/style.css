@@ -1,0 +1,202 @@
+/* Variables de Color (Paleta Personalizada de tus Mockups) */
+:root {
+    /* Basado en Mockup Libreria (1).jpg y (11).jpg */
+    --color-primary: #2e3a7c; /* Azul/Morado Oscuro (Botones principales, Headers) */
+    --color-secondary: #ffc107; /* Amarillo/Naranja Cálido (Acciones secundarias/Destacados) */
+    --color-background: #fdfdfd; /* Fondo muy claro */
+    --color-container-bg: #ffffff; /* Fondo de contenedores principal */
+    --color-text-dark: #212529; /* Negro para texto principal */
+    --color-text-light: #495057; /* Gris oscuro para texto secundario */
+    --color-border: #e9ecef; /* Borde muy suave */
+    --color-input-bg: #f8f9fa; /* Fondo de inputs muy suave */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+    background-color: var(--color-container-bg);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1, h2 {
+    color: var(--color-text-dark);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+h1 { font-size: 32px; }
+h2 { font-size: 24px; }
+.subtitle {
+    color: var(--color-text-light);
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px; 
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    box-shadow: none;
+}
+
+.btn-primary {
+    background-color: var(--color-primary); 
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #212957;
+}
+
+.btn-secondary {
+    background-color: var(--color-secondary); 
+    color: var(--color-text-dark); 
+}
+.btn-secondary:hover {
+    background-color: #e0a800;
+}
+
+/* --- Formularios y Inputs (Para Login/Register) --- */
+form {
+    width: 100%;
+    max-width: 400px; 
+    padding: 0;
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="number"] {
+    width: 100%;
+    padding: 12px 15px;
+    padding-left: 45px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px; 
+    background-color: var(--color-input-bg);
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+input:focus {
+    border-color: var(--color-primary);
+    outline: 1px solid var(--color-primary);
+    background-color: white;
+}
+
+/* --- Landing Page --- */
+.landing-page header {
+    padding: 80px 30px 40px;
+}
+.landing-page .logo {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+}
+
+/* --- Login/Register Page Layout --- */
+.auth-page {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+    max-width: 1280px;
+}
+.auth-page header {
+    padding: 20px 0;
+}
+.auth-page .logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+
+/* BACK BUTTON */
+.back-button {
+    text-decoration: none;
+    color: var(--color-text-dark);
+    font-weight: 500;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    padding: 20px 40px 10px 40px; 
+    align-self: flex-start;
+}
+.back-button .arrow {
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+/* Utility classes */
+.detail-price {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+body.store-page {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 800px;
+}
+
+
+.product-detail-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    min-height: calc(100vh - 250px); /* ocupa todo el alto menos el header */
+    margin: 0 auto;
+    width: 90%;
+    max-width: 800px;
+}
+
+
+
+.landing-page header {
+    padding: 80px 30px 40px;
+    text-align: center; /* Esto asegura que todo el contenido dentro de header esté centrado */
+}
+
+.auth-logo-icon {
+    width: 350px; /* Ajusta el tamaño del logo según lo necesites */
+    height: auto;
+    margin: 0 auto; 
+}
+

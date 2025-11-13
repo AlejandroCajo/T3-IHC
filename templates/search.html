@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/products.css">
+    <style>
+        .search-page {
+            max-width: 900px;
+            padding: 40px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .search-page h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        .search-input-mockup {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f7f7f7;
+            border: 1px solid var(--color-border);
+            border-radius: 25px;
+            padding: 10px 15px;
+            margin-bottom: 30px;
+        }
+        .search-input-mockup input {
+            border: none;
+            background: none;
+            flex-grow: 1;
+            padding: 0 10px;
+            font-size: 16px;
+            outline: none;
+        }
+        .search-input-mockup button {
+            background: var(--color-primary);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+        #search-results {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container search-page">
+        <a href="/templates/products.html" class="back-button" style="font-size: 20px;">← Volver</a>
+        <h2>Buscar productos</h2>
+
+        <div class="search-input-mockup">
+            <input type="text" id="search-input" placeholder="Buscar por nombre, autor o editorial...">
+            <button id="search-btn">Buscar</button>
+        </div>
+
+        <div id="search-results"></div>
+    </div>
+
+    <script src="../static/js/search.js"></script>
+</body>
+</html>

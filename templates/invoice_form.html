@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generar Documento</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="container invoice-form-page">
+        <a href="dashboard.html" class="back-button"><span class="arrow">&larr;</span></a>
+        <h2>Generar Documento de Venta</h2>
+
+        <form style="padding: 0 20px;">
+            <div class="invoice-options">
+                <input type="radio" id="boleta" name="docType" value="ticket" checked>
+                <label for="boleta">Boleta</label>
+                
+                <input type="radio" id="factura" name="docType" value="invoice">
+                <label for="factura">Factura</label>
+            </div>
+            
+            <h3 style="text-align: left; margin-top: 30px; margin-bottom: 15px;">Datos del Cliente</h3>
+            
+            <div class="form-group" style="padding: 0;">
+                <label for="docNumber" id="docLabel">DNI (Cliente):</label>
+                <input type="text" id="docNumber" placeholder="Número de documento" required>
+            </div>
+            
+            <div class="form-group" id="rucGroup" style="padding: 0; display: none;">
+                <label for="companyName">Nombre de Empresa:</label>
+                <input type="text" id="companyName" placeholder="Razón social">
+            </div>
+
+            <h3 style="text-align: left; margin-top: 30px; margin-bottom: 15px;">Productos</h3>
+            
+            <table style="width: 100%; font-size: 14px; text-align: left; border-collapse: collapse; margin-bottom: 20px;">
+                <thead>
+                    <tr style="border-bottom: 2px solid var(--color-border);">
+                        <th style="padding: 8px 0;">Producto</th>
+                        <th style="padding: 8px 0; text-align: right;">Cant.</th>
+                        <th style="padding: 8px 0; text-align: right;">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 8px 0;">Libro Coquito</td>
+                        <td style="padding: 8px 0; text-align: right;">2</td>
+                        <td style="padding: 8px 0; text-align: right;">15.80</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px 0;">Plumones Sharpie</td>
+                        <td style="padding: 8px 0; text-align: right;">1</td>
+                        <td style="padding: 8px 0; text-align: right;">35.00</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="summary-total" style="margin: 30px 0; padding: 0;">
+                <span>Total a Pagar:</span>
+                <span>S/ 50.80</span>
+            </div>
+            
+            <button type="submit" class="btn btn-secondary">Emitir Documento</button>
+        </form>
+    </div>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

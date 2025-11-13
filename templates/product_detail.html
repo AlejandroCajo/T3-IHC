@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Producto</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/products.css">
+</head>
+<body class="store-page">
+
+    <header class="header-container">
+        <div class="top-bar">
+            <a href="#">Ayuda</a>
+            <a href="#">Contáctanos</a>
+        </div>
+
+        <div class="main-nav-bar">
+            <img src="../static/images/logo.png" alt="Logo" class="auth-logo-icon">
+            <div class="header-search">
+                <input type="text" placeholder="Buscar productos, autores o editoriales...">
+                <button class="search-icon-btn">🔍</button>
+            </div>
+            <div class="header-user-actions">
+                <a href="/templates/login_client.html">
+                    <div class="icon-wrapper">👤</div>
+                    <span>Mi cuenta</span>
+                </a>
+                <a href="/templates/products.html">
+                    <div class="icon-wrapper">🏠</div>
+                    <span>Inicio</span>
+                </a>
+                <a href="/templates/cart.html">
+                    <div class="icon-wrapper">🛒</div>
+                    <span>Carrito</span>
+                </a>
+            </div>
+        </div>
+
+        <nav class="category-nav">
+            <a href="#" class="active-category">Todos</a>
+            <a href="#">Libros</a>
+            <a href="#">Revistas</a>
+            <a href="#">Educativos</a>
+            <a href="#">Ofertas</a>
+        </nav>
+    </header>
+
+    <main class="product-detail-layout">
+        <div id="product-image-section">
+            <img id="product-image" src="" alt="Producto" class="detail-image">
+        </div>
+
+        <div id="product-info-section">
+            <div class="breadcrumbs">
+                <a href="/templates/products.html">Inicio</a> › <span id="product-type"></span>
+            </div>
+            <h1 id="product-name">Cargando...</h1>
+            <p><strong>Autor:</strong> <span id="product-author"></span></p>
+            <p><strong>Editorial:</strong> <span id="product-editorial"></span></p>
+            <p><strong>Descripción:</strong> <span id="product-description"></span></p>
+
+            <h2 class="text-price">S/ <span id="product-price"></span></h2>
+            <p><strong>Stock:</strong> <span id="product-stock"></span></p>
+
+            <div class="quantity-control">
+                <button id="decrease">−</button>
+                <span id="quantity">1</span>
+                <button id="increase">+</button>
+            </div>
+
+            <button id="add-to-cart" class="btn btn-primary">🛒 Agregar al carrito</button>
+        </div>
+    </main>
+
+    <script src="../static/js/product_detail.js"></script>
+</body>
+</html>

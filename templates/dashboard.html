@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Empleados</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    </head>
+<body>
+    <div class="container dashboard-page">
+        <a href="login_employee.html" class="back-button logout-button"><span class="arrow">🚪</span> Cerrar Sesión</a>
+        <h2>Panel Administrativo</h2>
+        <p class="subtitle" style="text-align: left;">Bienvenido, [Nombre de Empleado]</p>
+
+        <section class="kpi-grid">
+            <div class="kpi-card income-card">
+                <span class="kpi-icon">💰</span>
+                <p class="kpi-label">Ingresos del Día</p>
+                <p class="kpi-value">S/ 4,500.50</p>
+            </div>
+            <div class="kpi-card outcome-card">
+                <span class="kpi-icon">📦</span>
+                <p class="kpi-label">Productos Vendidos</p>
+                <p class="kpi-value">210 und.</p>
+            </div>
+            <div class="kpi-card inventory-card">
+                <span class="kpi-icon">📚</span>
+                <p class="kpi-label">Inventario Crítico</p>
+                <p class="kpi-value">12 ítems</p>
+            </div>
+        </section>
+
+        <section class="sales-chart-container">
+            <h3>Ventas de Últimos 6 Meses</h3>
+            <div class="chart-area">
+                <div class="bar-chart">
+                    <div class="bar" style="height: 50%;">Ene</div>
+                    <div class="bar" style="height: 80%;">Feb</div>
+                    <div class="bar" style="height: 65%;">Mar</div>
+                    <div class="bar active" style="height: 95%;">Abr</div>
+                    <div class="bar" style="height: 70%;">May</div>
+                    <div class="bar" style="height: 40%;">Jun</div>
+                </div>
+                <p class="chart-label">S/ 10k | S/ 16k | S/ 13k | S/ 19k | S/ 14k | S/ 8k</p>
+            </div>
+        </section>
+
+        <section class="action-grid">
+            <h3>Acciones Rápidas</h3>
+            <a href="invoice_form.html" class="action-card sales-action">
+                <span class="action-icon">🧾</span>
+                <p>Generar Boleta/Factura</p>
+            </a>
+            <a href="#" class="action-card inventory-action">
+                <span class="action-icon">📝</span>
+                <p>Gestión de Inventario</p>
+            </a>
+            <a href="#" class="action-card reports-action">
+                <span class="action-icon">📊</span>
+                <p>Reportes y Analíticas</p>
+            </a>
+        </section>
+
+        <section class="recent-sales-table">
+            <h3>Últimas 5 Transacciones</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Cliente</th>
+                        <th>Monto</th>
+                        <th>Doc.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>V001</td><td>Ana Lopez</td><td>S/ 77.90</td><td>Boleta</td></tr>
+                    <tr><td>V002</td><td>P. Rivas</td><td>S/ 150.00</td><td>Factura</td></tr>
+                    <tr><td>V003</td><td>M. Salas</td><td>S/ 12.50</td><td>Boleta</td></tr>
+                    <tr><td>V004</td><td>R. Gómez</td><td>S/ 45.90</td><td>Boleta</td></tr>
+                    <tr><td>V005</td><td>E. Torres</td><td>S/ 210.00</td><td>Factura</td></tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

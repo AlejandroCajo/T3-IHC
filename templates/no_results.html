@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sin Resultados</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/products.css">
+    <style>
+        .no-results-page {
+            max-width: 600px;
+            padding: 40px;
+            align-items: center;
+            text-align: center;
+            flex-grow: 1; /* Para centrar verticalmente en la página */
+            justify-content: center;
+        }
+        .no-results-page h1 {
+            font-size: 32px;
+            margin-bottom: 5px;
+        }
+        .no-results-page .sad-face {
+            font-size: 80px;
+            margin: 30px 0;
+            color: var(--color-secondary); /* Amarillo de tus mockups */
+        }
+    </style>
+</head>
+<body>
+    <div class="container no-results-page">
+        <a href="products.html" class="back-button" style="align-self: flex-start; padding-left: 0; padding-top: 0; margin-bottom: 20px;">
+            <span class="arrow" style="font-size: 30px;">&larr;</span> Volver al Catálogo
+        </a>
+
+        <div class="search-input-mockup" style="width: 100%;">
+            <button>🔍</button>
+            <input type="text" placeholder="Set de Mochilas CLASS&WORK Stationary Yum Pets" value="Set de Mochilas CLASS&WORK Stationary Yum Pets">
+            <button onclick="window.location.href='search.html'" style="font-size: 14px; margin-left: 10px; color: var(--color-primary);">Cancelar</button>
+        </div>
+
+        <p class="sad-face">🙁</p>
+
+        <h1 style="color: var(--color-text-dark);">No se encontraron resultados</h1>
+        <p class="subtitle" style="margin-bottom: 0;">Intente de nuevo...</p>
+
+        <a href="products.html" class="btn btn-primary" style="margin-top: 30px;">Explorar Productos</a>
+    </div>
+</body>
+</html>

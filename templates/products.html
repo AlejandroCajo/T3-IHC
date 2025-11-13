@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - Fuente de Vida | Librerías</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/products.css">
+</head>
+<body>
+    <div class="container products-page">
+        
+        <div class="header-container">
+            <div class="top-bar">
+                <a href="#">Ayuda y Contacto</a>
+                <a href="#">Locales</a>
+                <a href="#">Promociones</a>
+            </div>
+
+            <div class="main-nav-bar">
+                <img src="../static/images/logo.png" alt="Logo Librería Fuente de Vida" class="auth-logo-icon">
+                
+                <div class="header-search">
+                    <input type="text" placeholder="Buscar por título, autor o ISBN">
+                    <button class="search-icon-btn" onclick="window.location.href='search.html'">🔍</button>
+                </div>
+                
+                <div class="header-user-actions">
+                    <a href="login_client.html">
+                        <span class="icon-wrapper">👤</span>
+                        Mi Cuenta
+                    </a>
+                    <a href="/templates/cart.html">
+                        <span class="icon-wrapper">🛒</span>
+                        Carrito
+                    </a>
+                </div>
+            </div>
+
+            <div class="category-nav">
+                <a href="#" class="active-category">Libros</a>
+                <a href="#">Útiles Escolares</a>
+                <a href="#">Juegos Didácticos</a>
+                <a href="#">Tecnología</a>
+                <a href="#">Regalos y Papelería</a>
+            </div>
+        </div>
+        <h2 style="text-align: left; padding: 20px 40px 10px; width: 100%;">Nuestras Recomendaciones</h2>
+
+        <div class="product-grid">
+            
+            
+        </div>
+    </div>
+    
+<script src="../static/js/products.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        const res = await fetch('/api/products');
+        const productos = await res.json();
+
+        const container = document.querySelector('.product-grid');
+        container.innerHTML = '';
+
+        productos.forEach(p => {
+            const card = document.createElement('div');
+            card.classList.add('product-card');
+            card.innerHTML = `
+                <img src="${p.imagen_url || 'images/default.png'}" alt="${p.nombre}">
+                <div class="card-body">
+                    <h5 class="card-title">${p.nombre} | Stock: ${p.cantidad} un.</h5>
+                    <p class="card-text text-price">S/ ${p.precio.toFixed(2)}</p>
+                    <a href="product_detail.html?id=${p.id}" class="btn btn-primary">Añadir al Carrito</a>
+                </div>
+            `;
+            container.appendChild(card);
+        });
+    } catch (error) {
+        console.error("Error cargando productos:", error);
+    }
+});
+</script>
+</body>
+</html>

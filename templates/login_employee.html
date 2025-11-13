@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión Empleado</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+    <div class="container auth-container">
+        <a href="auth_select.html" class="back-button" style="padding-top: 20px;"><span class="arrow">&larr;</span></a>
+        
+        <div class="logo-container" style="padding-top: 0;">
+            <img src="images/logo.png" alt="Icono Fuente de Vida Librería" class="auth-logo-icon">
+            <h2>Acceso Empleados</h2>
+            <p class="subtitle">Accede con tu usuario y código de empleado</p>
+        </div>
+        
+        <form id="employeeLoginForm">
+            <div class="form-group">
+                <label for="userCode">Código de Empleado</label>
+                <div class="input-icon-group">
+                    <input type="text" id="userCode" placeholder="EJP-001" required>
+                    <span class="icon icon-person"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="employeePassword">Contraseña</label>
+                <div class="input-icon-group">
+                    <input type="password" id="employeePassword" placeholder="********" required>
+                    <span class="icon icon-lock"></span>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-secondary">Acceder al Dashboard</button>
+        </form>
+    </div>
+
+    <script>
+        // JS simple para manejar la redirección a dashboard
+        document.getElementById('employeeLoginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Simulación de login exitoso
+            alert('Acceso de Empleado exitoso. Redirigiendo al Dashboard.');
+            window.location.href = 'template/products.html';
+        });
+    </script>
+</body>
+</html>

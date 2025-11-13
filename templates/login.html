@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Fuente de Vida Librería</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+    <div class="container auth-container">
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Icono Fuente de Vida Librería" class="auth-logo-icon">
+            <h2>Iniciar Sesión</h2>
+            <p class="subtitle">Ingresa tus datos para continuar</p>
+        </div>
+        
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Ingrese su correo</label>
+                <div class="input-icon-group">
+                    <input type="email" id="email" placeholder="email@email.com" required>
+                    <span class="icon icon-email"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password">Introduzca su contraseña</label>
+                <div class="input-icon-group">
+                    <input type="password" id="password" placeholder="********" required>
+                    <span class="icon icon-key"></span>
+                </div>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="rememberMe">
+                <label for="rememberMe">Recordarme</label>
+            </div>
+            <button type="submit" class="btn btn-secondary">Iniciar</button>
+        </form>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+</html>

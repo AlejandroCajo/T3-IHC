@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/products.css">
+</head>
+<body>
+    <div class="container cart-page">
+        <div class="header-container">
+            <div class="top-bar">
+                <a href="#">Ayuda y Contacto</a>
+                <a href="#">Locales</a>
+                <a href="#">Promociones</a>
+            </div>
+
+            <div class="main-nav-bar">
+                <img src="../static/images/logo.png" alt="Logo Librería Fuente de Vida" class="auth-logo-icon">
+                
+                <div class="header-search">
+                    <input type="text" placeholder="Buscar por título, autor o ISBN">
+                    <button class="search-icon-btn" onclick="window.location.href='search.html'">🔍</button>
+                </div>
+                
+                <div class="header-user-actions">
+                    <a href="/templates/login_client.html">
+                        <span class="icon-wrapper">👤</span>
+                        Mi Cuenta
+                    </a>
+                    <a href="/templates/cart.html">
+                        <span class="icon-wrapper">🛒</span>
+                        Carrito
+                    </a>
+                </div>
+            </div>
+
+            <div class="category-nav">
+                <a href="#" class="active-category">Libros</a>
+                <a href="#">Útiles Escolares</a>
+                <a href="#">Juegos Didácticos</a>
+                <a href="#">Tecnología</a>
+                <a href="#">Regalos y Papelería</a>
+            </div>
+        </div>
+        <h2 class="cart-title">Mi Carrito de Compras</h2>
+
+        <div class="cart-items">
+            <div class="cart-item">
+                <img src="images/producto1.jpg" alt="Producto 1" class="item-img">
+                <div class="item-details">
+                    <h5 style="font-size: 16px; margin-bottom: 5px;">Estimulación Lectora COQUITO</h5>
+                    <p style="font-size: 14px; color: var(--color-text-light);">S/ 7.90 c/u</p> 
+                </div>
+                <div class="item-quantity">
+                    <p style="font-weight: bold; margin-bottom: 5px;">Cantidad</p>
+                    <div class="quantity-control" style="width: 100px;">
+                        <button>-</button>
+                        <span>2</span>
+                        <button>+</button>
+                    </div>
+                </div>
+                <div class="item-actions">
+                    <p class="detail-price" style="font-size: 20px; color: var(--color-text-dark);">S/ 15.80</p>
+                    <a href="#">Eliminar</a> </div>
+            </div>
+
+            <div class="cart-item">
+                <img src="images/producto3.jpg" alt="Producto 3" class="item-img">
+                <div class="item-details">
+                    <h5 style="font-size: 16px; margin-bottom: 5px;">Marcadores permanentes SHARPIE X12</h5>
+                    <p style="font-size: 14px; color: var(--color-text-light);">S/ 35.00 c/u</p>
+                </div>
+                <div class="item-quantity">
+                    <p style="font-weight: bold; margin-bottom: 5px;">Cantidad</p>
+                    <div class="quantity-control" style="width: 100px;">
+                        <button>-</button>
+                        <span>1</span>
+                        <button>+</button>
+                    </div>
+                </div>
+                <div class="item-actions">
+                    <p class="detail-price" style="font-size: 20px; color: var(--color-text-dark);">S/ 35.00</p>
+                    <a href="#">Eliminar</a> </div>
+            </div>
+            
+            <a href="/templates/products.html" style="display: block; margin-top: 20px; text-align: left; color: var(--color-primary); text-decoration: none;">&larr; Seguir comprando</a>
+
+        </div>
+
+        <div class="cart-summary">
+            <h3 style="margin-bottom: 15px;">Resumen del Pedido</h3>
+            <div class="summary-item">
+        <span>Subtotal</span>  <span>S/ 50.80</span>
+    </div>
+            <div class="summary-item">
+                <span>Envío estimado</span>
+                <span>S/ 10.00</span>
+            </div>
+            <div class="summary-total">
+                <span>TOTAL</span>
+                <span>S/ 60.80</span>
+            </div>
+            <a href="checkout.html" class="btn btn-primary">Proceder al Pago</a>
+        </div>
+    </div>
+    <script src="../static/js/products.js"></script>
+</body>
+</html>

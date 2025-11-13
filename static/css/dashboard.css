@@ -1,0 +1,229 @@
+/* Estilos para el Dashboard de Empleados */
+
+.dashboard-page {
+    padding: 20px;
+    align-items: flex-start;
+}
+
+.dashboard-page h2 {
+    text-align: left;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.dashboard-page .subtitle {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.logout-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+/* --- KPIs (Key Performance Indicators) --- */
+.kpi-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.kpi-card {
+    width: calc(50% - 10px);
+    background-color: var(--color-container-bg);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    text-align: left;
+    border-left: 5px solid;
+}
+
+.kpi-card.income-card { border-color: var(--color-secondary); }
+.kpi-card.outcome-card { border-color: var(--color-primary); }
+.kpi-card.inventory-card { border-color: #ffc107; /* Amarillo */ }
+
+.kpi-icon {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.kpi-label {
+    font-size: 12px;
+    color: var(--color-text-light);
+}
+
+.kpi-value {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--color-text-dark);
+    margin-top: 5px;
+}
+
+/* --- Gráfico de Ventas (Simulado) --- */
+.sales-chart-container {
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: var(--color-container-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.sales-chart-container h3 {
+    text-align: left;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.chart-area {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.bar-chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    height: 100%;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 5px;
+}
+
+.bar {
+    flex: 1;
+    background-color: var(--color-primary);
+    border-radius: 5px 5px 0 0;
+    font-size: 10px;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 2px;
+    transition: height 0.5s;
+}
+
+.bar.active {
+    background-color: var(--color-secondary);
+}
+
+.chart-label {
+    font-size: 10px;
+    color: var(--color-text-light);
+    text-align: center;
+    margin-top: 5px;
+}
+
+
+/* --- Acciones Rápidas --- */
+.action-grid {
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 0 15px;
+}
+
+.action-grid h3 {
+    text-align: left;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.action-card {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-input-bg);
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: var(--color-text-dark);
+    transition: background-color 0.3s;
+}
+
+.action-card:hover {
+    background-color: var(--color-border);
+}
+
+.action-icon {
+    font-size: 28px;
+    margin-right: 15px;
+}
+
+.action-card p {
+    font-weight: bold;
+}
+
+/* --- Tabla de Ventas Recientes --- */
+.recent-sales-table {
+    width: 100%;
+    padding: 0 15px;
+}
+
+.recent-sales-table h3 {
+    text-align: left;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.recent-sales-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--color-container-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.recent-sales-table th, .recent-sales-table td {
+    padding: 10px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.recent-sales-table th {
+    background-color: var(--color-primary);
+    color: white;
+    font-weight: bold;
+}
+
+.recent-sales-table tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+/* --- Formulario de Facturación --- */
+.invoice-options {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: 15px;
+}
+
+.invoice-options input[type="radio"] {
+    display: none;
+}
+
+.invoice-options label {
+    padding: 10px 20px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--color-text-light);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.invoice-options input[type="radio"]:checked + label {
+    background-color: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
